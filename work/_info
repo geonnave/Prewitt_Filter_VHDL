@@ -1,0 +1,54 @@
+m255
+13
+cModel Technology
+dE:\Faculdade\IC_VHDL\Developments\Prewitt_Filter_VHDL
+Esaturator
+w1324490687
+DP ieee numeric_std UJ3[eJ:lANeDSH1LT5b980
+DP ieee std_logic_1164 ChagfbCXBFdaC62b9Y:;<1
+FE:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/Saturator.vhd
+l0
+L5
+Vm?J=TZ?1G`I[^O:[=Q[]O1
+OV;C;6.1g;31
+32
+o-work work -O0
+tExplicit 1 GenerateLoopIterationMax 100000
+Asature
+DP ieee numeric_std UJ3[eJ:lANeDSH1LT5b980
+DP ieee std_logic_1164 ChagfbCXBFdaC62b9Y:;<1
+DE work saturator m?J=TZ?1G`I[^O:[=Q[]O1
+l14
+L13
+V1E::8jXR27W6Z@dlOdDZ<2
+OV;C;6.1g;31
+32
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+o-work work -O0
+tExplicit 1 GenerateLoopIterationMax 100000
+Esaturator_tb
+w1324490449
+DP ieee numeric_std UJ3[eJ:lANeDSH1LT5b980
+DP ieee std_logic_1164 ChagfbCXBFdaC62b9Y:;<1
+FE:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/Saturator_tb.vhd
+l0
+L5
+V4aZk8Y3Ez;0kzd06@m8:f0
+OV;C;6.1g;31
+32
+o-work work -O0
+tExplicit 1 GenerateLoopIterationMax 100000
+Asature
+DP ieee numeric_std UJ3[eJ:lANeDSH1LT5b980
+DP ieee std_logic_1164 ChagfbCXBFdaC62b9Y:;<1
+DE work saturator_tb 4aZk8Y3Ez;0kzd06@m8:f0
+l21
+L8
+VjLV>kRk4bOh64EZ1L7oRD0
+OV;C;6.1g;31
+32
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+o-work work -O0
+tExplicit 1 GenerateLoopIterationMax 100000
