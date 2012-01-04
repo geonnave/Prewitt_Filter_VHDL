@@ -5,16 +5,16 @@ use ieee.numeric_std.all;
 entity MAC_signed is
 	port
 	(
-		a			:	in signed(8 downto 0);
+		a			:	in signed(8 downto 0);		--	a and b are the in pixels
 		b			:	in signed(8 downto 0);
-		clk			:	in std_logic;
-		sload		:	in std_logic;
-		accum_out	:	out signed(17 downto 0)
+		clk			:	in std_logic;				--	the clock
+		sload		:	in std_logic;				--	
+		accum_out	:	out signed(17 downto 0)		--	the output pixel 
 	);
 end entity;
 
 architecture rtl of MAC_signed is
-
+--	registers (signals) to supply the MAC operation
 signal	a_reg		:	signed(8 downto 0);
 signal	b_reg		:	signed(8 downto 0);
 signal	sload_reg	:	std_logic;
@@ -23,9 +23,9 @@ signal	adder_out	:	signed(17 downto 0);
 signal	old_result	:	signed(17 downto 0);
 
 begin
-	mult_reg <= a_reg * b_reg;
+	mult_reg <= a_reg * b_reg;						--	
 	
-	process(adder_out, sload_reg)
+	process(adder_out, sload_reg)					--	reset the old result or add the sum result
 	begin
 		if(sload_reg = '1') then
 			old_result <= (others => '0');
@@ -34,7 +34,7 @@ begin
 		end if;
 	end process;
 	
-	process(clk)
+	process(clk)									--	sum the old result and the mult_reg
 	begin
 		if (rising_edge(clk)) then
 			a_reg <= a;
@@ -45,7 +45,7 @@ begin
 		end if;
 	end process;
 	
-	accum_out <= adder_out;
+	accum_out <= adder_out;							--	the pixel resulting is sent to the output
 	
 end rtl;
 

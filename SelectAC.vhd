@@ -12,7 +12,7 @@ entity SelectAC is
 		);
 end entity;
 
-architecture conv of SelectAC is
+architecture rtl of SelectAC is
 signal	a_reg			:	signed(8 downto 0);
 signal	b_reg			:	signed(8 downto 0);
 signal	sload_reg		:	std_logic;
