@@ -14,8 +14,8 @@ entity Convolution is
 		clk							:	in std_logic;				--	the clock
 		sload						:	in std_logic;				--	
 		pixel_out					:	out std_logic_vector(7 downto 0);		--	the output pixel 
-		count						:	out unsigned(3 downto 0);
-		accum						:	out signed(15 downto 0)
+		count						:	out unsigned(3 downto 0);	--just for test, to see the results
+		accum						:	out signed(15 downto 0)		--just for test, to see the results
 	);
 end entity;
 
