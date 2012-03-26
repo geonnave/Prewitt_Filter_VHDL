@@ -39,11 +39,11 @@ component Saturator is
 	);
 end component;
 
-signal 	sig_a			:	std_logic_vector(7 downto 0)		:= (others => '0');
-signal 	sig_b			:	signed(2 downto 0)		:= (others => '0');
-signal 	sig_clk			:	std_logic				:= '0';
-signal 	sig_sload		:	std_logic				:= '1';
-signal 	sig_accum_out	:	signed(15 downto 0)		:= (others => '0');
+signal 	sig_a			:	std_logic_vector(7 downto 0);
+signal 	sig_b			:	signed(2 downto 0);
+signal 	sig_clk			:	std_logic;
+signal 	sig_sload		:	std_logic;
+signal 	sig_accum_out	:	signed(15 downto 0);
 
 signal 	sig_x			:	std_logic_vector(15 downto 0);
 signal 	sig_o			:	std_logic_vector(7 downto 0);
@@ -57,6 +57,8 @@ begin
 	mac: MAC_signed port map (
 		a => sig_a, b => sig_b, clk => sig_clk, sload => sig_sload, accum_out => sig_accum_out
 	);
+	
+	sig_clk <= clk;
 	
 	sig_sload <= '1' when sig_counter = "0000";
 	
