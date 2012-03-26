@@ -1,0 +1,39 @@
+cd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL
+
+
+
+------------------------SelectAC_tb
+vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/SelectAC.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/SelectAC_tb.vhd
+
+vsim work.SelectAC_tb
+
+add wave sim:/selectac_tb/*
+
+
+
+------------------------MAC_signed_tb
+vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MAC_signed.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MAC_signed_tb.vhd
+
+vsim work.mac_signed_tb
+
+add wave sim:/mac_signed_tb/*
+
+run 200 ns
+
+------------------------Saturator_tb
+vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/Saturator.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/Saturator_tb.vhd
+
+vsim work.Saturator_tb
+
+add wave sim:/saturator_tb/*
+
+run 180 ns
+
+------------------------Convolution_tb
+vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/Convolution.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/Convolution_tb.vhd
+
+vsim work.convolution_tb
+
+add wave sim:/convolution_tb/*
+
+run 620 ns
