@@ -36,4 +36,4 @@ vsim work.convolution_tb
 
 add wave sim:/convolution_tb/*
 
-run 620 ns
+run 660 ns
