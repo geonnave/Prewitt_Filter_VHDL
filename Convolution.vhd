@@ -61,7 +61,7 @@ begin
 	sig_clk <= clk;
 	sig_sload <= sload;
 	
-	sig_xsload <= '1' when sig_counter = "0000";
+--	sig_sload <= '1' when sig_counter = "0000";
 	
 	counter: process(clk)
 	begin

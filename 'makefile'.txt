@@ -1,7 +1,6 @@
 cd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL
 
 
-
 ------------------------SelectAC_tb
 vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/SelectAC.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/SelectAC_tb.vhd
 
@@ -18,7 +17,7 @@ vsim work.mac_signed_tb
 
 add wave sim:/mac_signed_tb/*
 
-run 200 ns
+run 240 ns
 
 ------------------------Saturator_tb
 vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/Saturator.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/Saturator_tb.vhd

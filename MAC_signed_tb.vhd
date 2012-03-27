@@ -38,19 +38,23 @@ begin
 		sig_sload <= '1';
 		wait for 40 ns;
 		sig_sload <= '0';
-		sig_a <= "00000010";
+		sig_a <= "00000010";	-- 1
 		sig_b <= "001";
 		wait for 40 ns;
-		sig_a <= "00000010";
+		sig_a <= "00000010";	-- 2
 		sig_b <= "111";
 		wait for 40 ns;
-		assert (sig_accum_out = "000000000000000010") report "something wrong on positive test";
-		sig_a <= "00000010";
+		assert (sig_accum_out = "000000000000000010") report "something wrong on #1 test";	-- 1
+		sig_a <= "00000010";	-- 3
 		sig_b <= "111";
 		wait for 40 ns;
-		assert (sig_accum_out = "000000000000000000") report "something wrong on negative test";
+		assert (sig_accum_out = "000000000000000000") report "something wrong on #2 test";	-- 2
+		sig_a <= "00000001";
+		sig_b <= "111";
 		wait for 40 ns;
-		assert (sig_accum_out = "111111111111111110") report "something wrong on negative test";
+		assert (sig_accum_out = "111111111111111110") report "something wrong on #3 test";	-- 3
+		wait for 40 ns;
+		assert (sig_accum_out = "111111111111111101") report "something wrong on #4 test";	-- 4
 	end process tb;
 	
 	clock_gen : process

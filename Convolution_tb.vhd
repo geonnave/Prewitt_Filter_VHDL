@@ -51,16 +51,23 @@ begin
 
 	tb: process
 	begin
-		sig_sload <= '1';
-		wait for 40 ns;
-		sig_sload <= '0';
 		sin_x0y0 <= "00000000"; sin_x0y1 <= "00000000"; sin_x0y2 <= "00000000";
 		sin_x1y0 <= "00000000"; sin_x1y1 <= "00000000"; sin_x1y2 <= "00000000";
 		sin_x2y0 <= "00000000"; sin_x2y1 <= "00000000"; sin_x2y2 <= "00000000";
 		smf_x0y0 <= "000"; smf_x0y1 <= "000"; smf_x0y2 <= "000";
 		smf_x1y0 <= "000"; smf_x1y1 <= "000"; smf_x1y2 <= "000";
 		smf_x2y0 <= "000"; smf_x2y1 <= "000"; smf_x2y2 <= "000";
-		wait for 620 ns;
+		sig_sload <= '1';
+		wait for 40 ns;
+		sig_sload <= '0';
+		sin_x0y0 <= "00000000"; sin_x0y1 <= "00000000"; sin_x0y2 <= "00000000";		-- 1
+		sin_x1y0 <= "00000000"; sin_x1y1 <= "00000000"; sin_x1y2 <= "00000000";
+		sin_x2y0 <= "00000000"; sin_x2y1 <= "00000000"; sin_x2y2 <= "00000000";
+		smf_x0y0 <= "111"; smf_x0y1 <= "000"; smf_x0y2 <= "001";
+		smf_x1y0 <= "111"; smf_x1y1 <= "000"; smf_x1y2 <= "001";
+		smf_x2y0 <= "111"; smf_x2y1 <= "000"; smf_x2y2 <= "001";
+		wait for 390 ns;
+		assert ( sig_pixel_out = "00000000") report ("test #1 failed");		-- 1
 	end process tb;
 	
 	clock_gen : process
