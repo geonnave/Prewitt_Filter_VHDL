@@ -23,7 +23,8 @@ signal	adder_out	:	signed(15 downto 0);
 signal	old_result	:	signed(15 downto 0);
 
 begin
-	mult_reg <= (signed("00000" & a_reg) * b_reg);
+	mult_reg <= (signed("00000" & a_reg) * b_reg) when sload_reg = '0' else
+				"0000000000000000";
 	
 	process(adder_out, sload_reg)					--	reset the old result or add the sum result
 	begin
