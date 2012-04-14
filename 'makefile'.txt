@@ -46,5 +46,19 @@ add wave sim:/convolutionhv_tb/*
 
 run 3520 ns
 
+------------------------ConvolutionN_tb
+vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/ConvolutionN.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/ConvolutionN_tb.vhd
+
+vsim work.convolutionn_tb
+
+add wave sim:/convolutionn_tb/*
+
+run 40 ns
+
+
+
+
+
+
 
 

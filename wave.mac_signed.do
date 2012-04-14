@@ -20,4 +20,4 @@ configure wave -gridperiod 1
 configure wave -griddelta 40
 configure wave -timeline 0
 update
-WaveRestoreZoom {0 ps} {128 ns}
+WaveRestoreZoom {118400 ps} {246400 ps}
