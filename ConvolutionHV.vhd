@@ -1,6 +1,8 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use work.MAC_signed;
+use work.Saturator;
 
 entity ConvolutionHV is
 	port
@@ -58,9 +60,6 @@ signal sig_o			:	std_logic_vector(7 downto 0);
 
 signal	reg_counter		:	unsigned(3 downto 0)	:= "1100";
 
-for macH: MAC_signed use entity work.MAC_signed;
-for macV: MAC_signed use entity work.MAC_signed;
-for sat: Saturator use entity work.Saturator;
 
 begin
 	macH: MAC_signed port map (
