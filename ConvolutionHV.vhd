@@ -79,7 +79,7 @@ begin
 	counter: process(clk)
 	begin
 		if (rising_edge(clk)) then
-			count <= reg_counter;
+			--count <= reg_counter;
 			if (reg_counter = "1100" or sig_sload = '1') then
 				reg_counter <= "0000";
 			else
@@ -186,6 +186,8 @@ begin
 	sig_s <= std_logic_vector((sig_accum_outH + sig_accum_outV)) when reg_counter = "1011";
 	
 	pixel_out <= sig_o when reg_counter = "1100";
+	
+	count <= reg_counter;
 	
 end rtl;
 

@@ -9,8 +9,8 @@ entity ConvolutionN is
 	port
 	(
 		img_in						:	in	matrix_in;	--	image in
-		mh							:	in	std_logic_vector(26 downto 0);			--	horizontal filter mask 
-		mv							:	in	std_logic_vector(26 downto 0);			--	vertical filter mask 
+		mh							:	in	std_logic_vector(26 downto 0)	:=	"001001001000000000111111111";			--	horizontal filter mask 
+		mv							:	in	std_logic_vector(26 downto 0)	:=	"001000111001000111001000111";			--	vertical filter mask 
 		clk							:	in	std_logic;				--	the clock
 		sload						:	in	std_logic;				--	--	
 		counter						:	out	unsigned(3 downto 0);	
@@ -44,10 +44,10 @@ signal 	sin_x0y0, sin_x0y1, sin_x0y2,
 		sin_x2y0, sin_x2y1, sin_x2y2	:	std_logic_vector(7 downto 0)		:= (others => '0');
 signal 	smh_x0y0, smh_x0y1, smh_x0y2,
 		smh_x1y0, smh_x1y1, smh_x1y2,
-		smh_x2y0, smh_x2y1, smh_x2y2	:	signed(2 downto 0)		:= (others => '0');
+		smh_x2y0, smh_x2y1, smh_x2y2	:	signed(2 downto 0);
 signal 	smv_x0y0, smv_x0y1, smv_x0y2,
 		smv_x1y0, smv_x1y1, smv_x1y2,
-		smv_x2y0, smv_x2y1, smv_x2y2	:	signed(2 downto 0)		:= (others => '0');
+		smv_x2y0, smv_x2y1, smv_x2y2	:	signed(2 downto 0);
 signal	sig_clk							:	std_logic				:= '0';
 signal	sig_sload						:	std_logic				:= '0';
 signal	sig_pixel_out					:	std_logic_vector(7 downto 0);
@@ -55,7 +55,6 @@ signal	sig_count						:	unsigned(3 downto 0);
 
 
 signal sig_img_out						:	matrix_out;
-
 
 
 begin
@@ -81,6 +80,10 @@ begin
 	counter <= sig_count;
 	
 	img_out <= sig_img_out;
+	
+	sig_clk <= clk;
+	
+	sig_sload <= sload;
 
 end rtl;
 

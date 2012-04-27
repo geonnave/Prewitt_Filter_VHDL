@@ -46,6 +46,9 @@ add wave sim:/convolutionhv_tb/*
 
 run 3520 ns
 
+------------------------matrix_types
+vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/matrix_types.vhd
+
 ------------------------ConvolutionN_tb
 vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/ConvolutionN.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/ConvolutionN_tb.vhd
 
@@ -53,17 +56,34 @@ vsim work.convolutionn_tb
 
 add wave sim:/convolutionn_tb/*
 
-run 40 ns
+run 2240 ns
 
-------------------------Convtest_tb
-vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/convtest.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/convtest_tb.vhd
+------------------------MemImgROM_tb
+vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MemImgROM.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MemImgROM_tb.vhd
 
-vsim work.convtest_tb
+vsim work.MemImgROM_tb
 
-add wave sim:/convtest_tb/*
+add wave sim:/MemImgROM_tb/*
 
-run 1040 ns
+run 200 ns
 
+------------------------MemPrewittMaskROM_tb
+vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MemPrewittMaskROM.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MemPrewittMaskROM_tb.vhd
+
+vsim work.MemPrewittMaskROM_tb
+
+add wave sim:/MemPrewittMaskROM_tb/*
+
+run 160 ns
+
+------------------------Mem_Conv_Controller
+vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/Mem_Conv_Controller.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/Mem_Conv_Controller_tb.vhd
+
+vsim work.Mem_Conv_Controller_tb
+
+add wave sim:/Mem_Conv_Controller_tb/*
+
+run 100 ns
 
 
 
