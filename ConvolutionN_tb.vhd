@@ -112,7 +112,7 @@ begin
 				) 
 								report "test #4 failed";
 	end process tb;
-		
+
 	
 	clock_gen : process
 	begin

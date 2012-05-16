@@ -1,6 +1,10 @@
 cd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL
 
 
+------------------------ALL
+vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/ConvolutionHV.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/ConvolutionHV_tb.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/ConvolutionN.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/ConvolutionN_tb.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/filter_masks.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MAC_signed.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MAC_signed_tb.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MainController.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MainController_tb.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/matrix_types.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/mem_size.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MemImgROM.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MemImgROM_tb.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MemMaskROM.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MemMaskROM_tb.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/Saturator.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/Saturator_tb.vhd
+
+
 ------------------------SelectAC_tb
 vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/SelectAC.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/SelectAC_tb.vhd
 
@@ -8,7 +12,7 @@ vsim work.SelectAC_tb
 
 add wave sim:/selectac_tb/*
 
-
+run 240 ns
 
 ------------------------MAC_signed_tb
 vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MAC_signed.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MAC_signed_tb.vhd
@@ -62,14 +66,14 @@ vsim work.MemImgROM_tb
 
 add wave sim:/MemImgROM_tb/*
 
-run 200 ns
+run 280 ns
 
-------------------------MemPrewittMaskROM_tb
-vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MemPrewittMaskROM.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MemPrewittMaskROM_tb.vhd
+------------------------MemMaskROM_tb
+vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MemMaskROM.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MemMaskROM_tb.vhd
 
-vsim work.MemPrewittMaskROM_tb
+vsim work.MemMaskROM_tb
 
-add wave sim:/MemPrewittMaskROM_tb/*
+add wave sim:/MemMaskROM_tb/*
 
 run 160 ns
 

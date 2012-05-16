@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.matrix_types.all;
 use work.ConvolutionHV;
-	
+
 entity ConvolutionN is
 	port
 	(
@@ -58,8 +58,8 @@ signal sig_img_out						:	matrix_out;
 
 
 begin
-	gen_col: for i in 1 to rcol generate
-		gen_lin: for j in 1 to rlin generate
+	gen_lin: for i in 1 to rlin generate
+		gen_col: for j in 1 to rcol generate
 			con: ConvolutionHV port map (
 				in_x0y0 => img_in(i-1, j-1),			in_x0y1 => img_in(i-1, j),				in_x0y2 => img_in(i-1, j+1),
 				in_x1y0 => img_in(i  , j-1),			in_x1y1 => img_in(i  , j),				in_x1y2 => img_in(i  , j+1),
@@ -74,8 +74,8 @@ begin
 				mv_x2y0 => signed(mv(8 	downto 6)),		mv_x2y1 => signed(mv(5 	downto 3)),		mv_x2y2 => signed(mv(2 	downto 0)),
 				clk => sig_clk, sload => sig_sload, pixel_out => sig_img_out(i, j), count => sig_count
 			);
-		end generate gen_lin;
-	end generate gen_col;
+		end generate gen_col;
+	end generate gen_lin;
 	
 	counter <= sig_count;
 	
