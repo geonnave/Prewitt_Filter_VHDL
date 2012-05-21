@@ -2,14 +2,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.mem_size.all;
+use work.matrix_types.all;
 
 entity MemImgROM is
 	port
 	(
-		addr_i	:	in	natural		range 0 to lin;
-		addr_j	:	in	natural		range 0 to col;
+		addr_i	:	in	natural		range 0 to lin-1;
+		addr_j	:	in	natural		range 0 to col-1;
 		clk		:	in std_logic;
-		q		:	out std_logic_vector(7 downto 0)
+		q		:	out matrix_in
 	);
 end entity;
 
@@ -6760,12 +6761,17 @@ architecture rtl of MemImgROM is
 	-- will create a memory initialization file (.mif) based on the 
 	-- default value.
 	signal rom : memory_t := init_rom;
-	
 begin
 	process(clk)
+	variable t : matrix_in;
 	begin
+		for i in addr_i to (addr_i + elin-1) loop
+			for j in addr_j to (addr_j + ecol-1) loop
+				t(i, j) := rom(addr_i+i, addr_j+j);
+			end loop;
+		end loop;
 		if(rising_edge(clk)) then
-			q <= rom(addr_i, addr_j);
+			q <= t;
 		end if;
 	end process;
 		

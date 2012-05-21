@@ -19,10 +19,37 @@ component MainController is
 	port
 	(
 		clk			:	in	std_logic;
-		sload		:	in	std_logic
+		sload		:	in	std_logic;
+		enable		:	in	std_logic;
+		o			:	out matrix_out
 	);
 end component;
 
+signal	sig_clk		:	std_logic;
+signal	sig_sload	:	std_logic;
+signal	sig_enable	:	std_logic;
+signal	sig_o		:	matrix_out;
+
+for dut: MainController use entity work.MainController;
+
 begin
 	
+	dut: MainController port map (
+		clk => sig_clk, sload => sig_sload, enable => sig_enable, o => sig_o
+	);
+	
+	
+	tb : process 
+	begin
+		sig_sload <= '0';
+		wait for 2000 ns;
+	end process tb;
+	
+	clock_gen : process
+	begin
+	   sig_clk <= '1';
+	   wait for 20 ns;
+	   sig_clk <= '0';
+	   wait for 20 ns;
+	end process clock_gen;
 end;
