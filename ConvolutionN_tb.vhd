@@ -35,7 +35,8 @@ for dut: ConvolutionN use entity work.ConvolutionN;
 begin
 
 	dut: ConvolutionN port map (
-		img_in => sig_img_in, mh => sig_mh, mv => sig_mv, clk => sig_clk, sload => sig_sload, counter => sig_count, img_out => sig_img_out
+		img_in => sig_img_in, mh => sig_mh, mv => sig_mv, clk => sig_clk, 
+		sload => sig_sload, counter => sig_count, img_out => sig_img_out
 	);
 	
 	tb : process 

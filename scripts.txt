@@ -68,15 +68,6 @@ add wave sim:/MemImgROM_tb/*
 
 run 280 ns
 
-------------------------MemMaskROM_tb
-vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MemMaskROM.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MemMaskROM_tb.vhd
-
-vsim work.MemMaskROM_tb
-
-add wave sim:/MemMaskROM_tb/*
-
-run 160 ns
-
 ------------------------MainController
 vcom -reportprogress 300 -work work D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MainController.vhd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/MainController_tb.vhd
 
@@ -84,7 +75,7 @@ vsim work.MainController_tb
 
 add wave sim:/MainController_tb/*
 
-run 100 ns
+run 2000 ns
 
 
 

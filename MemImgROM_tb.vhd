@@ -2,6 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.mem_size.all;
+use work.matrix_types.all;
 use work.MemImgROM;
 
 entity MemImgROM_tb is
@@ -16,7 +17,7 @@ component MemImgROM is
 		addr_i	:	in	natural		range 0 to lin;
 		addr_j	:	in	natural		range 0 to col;
 		clk		:	in std_logic;
-		q		:	out std_logic_vector(7 downto 0)
+		q		:	out matrix_in
 	);
 end component;
 
@@ -24,7 +25,7 @@ end component;
 signal	sig_addr_i	:	natural		range 0 to lin;
 signal	sig_addr_j	:	natural		range 0 to col;
 signal	sig_clk		:	std_logic	:= '0';
-signal	sig_q		:	std_logic_vector(7 downto 0);
+signal	sig_q		:	matrix_in;
 
 for dut: MemImgROM use entity work.MemImgROM;
 
@@ -34,27 +35,14 @@ begin
 
 	tb: process
 	begin
-		wait for 40 ns;
 		sig_addr_i <= 0;
 		sig_addr_j <= 0;
 		wait for 40 ns;
-		assert (sig_q = "00010000") report " (0, 0) = 00010000 --failed";
-		sig_addr_i <= 5;
-		sig_addr_j <= 5;
+		sig_addr_i <= 30;
+		sig_addr_j <= 30;
 		wait for 40 ns;
-		assert (sig_q = "01000000") report " (5, 5) = 01000000 --failed";
-		sig_addr_i <= 1;
-		sig_addr_j <= 1;
-		wait for 40 ns;
-		assert (sig_q = "00010000") report " (1, 1) = 00010000 --failed";
-		sig_addr_i <= 13;
-		sig_addr_j <= 13;
-		wait for 40 ns;
-		assert (sig_q = "01000000") report " (13, 13) = 01000000 --failed";
-		sig_addr_i <= 16;
-		sig_addr_j <= 16;
-		wait for 40 ns;
-		assert (sig_q = "00010000") report " (16, 16) = 00010000 --failed";
+		sig_addr_i <= 36;
+		sig_addr_j <= 36;
 		wait for 40 ns;
 	end process tb;
 
