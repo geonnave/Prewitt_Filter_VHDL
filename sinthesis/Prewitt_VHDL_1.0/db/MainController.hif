@@ -1,0 +1,494 @@
+Version 7.2 Build 151 09/26/2007 SJ Web Edition
+11
+2631
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+MemImgROM
+# storage
+db|MainController.(1).cnf
+db|MainController.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+MemImgROM.vhd
+f6cbbb84fb639ce4c4d64b58cb9088
+4
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(q)
+0 to 5
+PARAMETER_STRING
+USR
+}
+# include_file {
+mem_size.vhd
+a341c0bf3eee1d023585baeb83aac85
+matrix_types.vhd
+a24740e6392ec1f015db5c036c2188c
+}
+# hierarchies {
+MemImgROM:imgROM
+}
+# lmf
+c:|altera|72|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+MAC_signed
+# storage
+db|MainController.(4).cnf
+db|MainController.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+MAC_signed.vhd
+93d41e5ce9ce331a08f527c9bd51a0
+4
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(a)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(b)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(accum_out)
+15 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:1:con|MAC_signed:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:1:con|MAC_signed:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:2:con|MAC_signed:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:2:con|MAC_signed:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:3:con|MAC_signed:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:3:con|MAC_signed:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:4:con|MAC_signed:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:4:con|MAC_signed:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:1:con|MAC_signed:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:1:con|MAC_signed:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:2:con|MAC_signed:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:2:con|MAC_signed:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:3:con|MAC_signed:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:3:con|MAC_signed:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:4:con|MAC_signed:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:4:con|MAC_signed:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:1:con|MAC_signed:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:1:con|MAC_signed:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:2:con|MAC_signed:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:2:con|MAC_signed:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:3:con|MAC_signed:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:3:con|MAC_signed:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:4:con|MAC_signed:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:4:con|MAC_signed:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:1:con|MAC_signed:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:1:con|MAC_signed:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:2:con|MAC_signed:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:2:con|MAC_signed:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:3:con|MAC_signed:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:3:con|MAC_signed:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:4:con|MAC_signed:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:4:con|MAC_signed:macV
+}
+# lmf
+c:|altera|72|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+Saturator
+# storage
+db|MainController.(5).cnf
+db|MainController.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+Saturator.vhd
+3eb842fd52cba6e28a629038fcb24822
+4
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(a)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(o)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:1:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:2:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:3:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:4:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:1:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:2:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:3:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:4:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:1:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:2:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:3:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:4:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:1:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:2:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:3:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:4:con|Saturator:sat
+}
+# lmf
+c:|altera|72|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+MainController
+# storage
+db|MainController.(0).cnf
+db|MainController.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+MainController.vhd
+10b44227be42be339cd9c6549b41d888
+4
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+MemImgROM.vhd
+f6cbbb84fb639ce4c4d64b58cb9088
+mem_size.vhd
+a341c0bf3eee1d023585baeb83aac85
+matrix_types.vhd
+a24740e6392ec1f015db5c036c2188c
+filter_masks.vhd
+bfc7a3a77b752e14ce1c26e61f6ca6e
+ConvolutionN.vhd
+7a66badf9d011854d3aefab95638a8d
+ConvolutionHV.vhd
+3673967a447b713acb5d4f5688941
+MAC_signed.vhd
+93d41e5ce9ce331a08f527c9bd51a0
+Saturator.vhd
+3eb842fd52cba6e28a629038fcb24822
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|72|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+ConvolutionN
+# storage
+db|MainController.(2).cnf
+db|MainController.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ConvolutionN.vhd
+7a66badf9d011854d3aefab95638a8d
+4
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(img_in)
+0 to 5
+PARAMETER_STRING
+USR
+ constraint(mh)
+26 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv)
+26 downto 0
+PARAMETER_STRING
+USR
+ constraint(counter)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(img_out)
+1 to 4
+PARAMETER_STRING
+USR
+}
+# include_file {
+matrix_types.vhd
+a24740e6392ec1f015db5c036c2188c
+ConvolutionHV.vhd
+3673967a447b713acb5d4f5688941
+MAC_signed.vhd
+93d41e5ce9ce331a08f527c9bd51a0
+Saturator.vhd
+3eb842fd52cba6e28a629038fcb24822
+}
+# hierarchies {
+ConvolutionN:convN
+}
+# lmf
+c:|altera|72|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+ConvolutionHV
+# storage
+db|MainController.(3).cnf
+db|MainController.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ConvolutionHV.vhd
+3673967a447b713acb5d4f5688941
+4
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(in_x0y0)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in_x0y1)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in_x0y2)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in_x1y0)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in_x1y1)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in_x1y2)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in_x2y0)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in_x2y1)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in_x2y2)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(mh_x0y0)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mh_x0y1)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mh_x0y2)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mh_x1y0)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mh_x1y1)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mh_x1y2)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mh_x2y0)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mh_x2y1)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mh_x2y2)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv_x0y0)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv_x0y1)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv_x0y2)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv_x1y0)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv_x1y1)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv_x1y2)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv_x2y0)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv_x2y1)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv_x2y2)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(pixel_out)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(count)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+MAC_signed.vhd
+93d41e5ce9ce331a08f527c9bd51a0
+Saturator.vhd
+3eb842fd52cba6e28a629038fcb24822
+}
+# hierarchies {
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:1:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:2:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:3:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:4:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:1:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:2:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:3:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:4:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:1:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:2:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:3:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:4:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:1:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:2:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:3:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:4:con
+}
+# lmf
+c:|altera|72|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# complete
+

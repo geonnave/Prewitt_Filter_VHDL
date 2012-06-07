@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.120 ns
+From           : ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:3:con|pixel_out[7]
+To             : o[4][3][7]
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 168.10 MHz ( period = 5.949 ns )
+From           : ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:3:con|MAC_signed:macV|a_reg[3]
+To             : ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:3:con|MAC_signed:macV|adder_out[15]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:1:con|MAC_signed:macV|adder_out[5]
+To             : ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:1:con|sig_s[5]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 4320
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 4320
+
+--------------------------------------------------------------------------------------
+
