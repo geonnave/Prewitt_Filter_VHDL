@@ -56,7 +56,7 @@ begin
 --		init <= '1';
 --		wait for 40 ns;
 --		init <= '0';
-		wait for 27440 ns;
+		wait for 27480 ns;
 		wait for 560 ns;
 		wait for 80 ns;
 	end process tb;

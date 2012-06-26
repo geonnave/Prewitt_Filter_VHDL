@@ -116,7 +116,7 @@ begin
 	
 	prewitt: process(sig_count_j, clk)
 	begin
-		if (sig_count = "1011" and sig_count_i < lin-elin and sig_count_j < col-ecol) then
+		if (sig_count = "1011" and sig_count_i <= lin-elin and sig_count_j <= col-ecol) then
 			si_addr_i <= sig_count_i;
 			si_addr_j <= sig_count_j;
 		elsif (sig_count = "0000") then
