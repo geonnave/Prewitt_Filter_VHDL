@@ -1,0 +1,1 @@
+cd D:/Faculdade/IC_VHDL/Developments/Prewitt_Filter_VHDL/PrewittVHDL_1.0/modelsim/
