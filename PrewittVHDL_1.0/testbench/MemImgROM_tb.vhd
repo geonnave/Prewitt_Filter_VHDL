@@ -38,12 +38,6 @@ begin
 		sig_addr_i <= 0;
 		sig_addr_j <= 0;
 		wait for 40 ns;
-		sig_addr_i <= 30;
-		sig_addr_j <= 30;
-		wait for 40 ns;
-		sig_addr_i <= 36;
-		sig_addr_j <= 36;
-		wait for 40 ns;
 	end process tb;
 
 	clock_gen : process

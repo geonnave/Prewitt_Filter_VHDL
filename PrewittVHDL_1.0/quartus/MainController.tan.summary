@@ -2,22 +2,42 @@
 Timing Analyzer Summary
 --------------------------------------------------------------------------------------
 
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.540 ns
+From           : init
+To             : sig_count_i[3]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 16.969 ns
-From           : sc_img_in[5][1][6]
-To             : m[5][1][6]
+Actual Time    : 13.132 ns
+From           : sc_img_in[0][0][4]
+To             : m[0][0][4]
 From Clock     : clk
 To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.375 ns
+From           : init
+To             : sig_count_j[2]
+From Clock     : --
+To Clock       : clk
 Failed Paths   : 0
 
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 20.54 MHz ( period = 48.686 ns )
-From           : si_addr_i[1]
-To             : MemImgROM:imgROM|q[4][2][3]
+Actual Time    : 64.99 MHz ( period = 15.386 ns )
+From           : si_addr_i[3]
+To             : MemImgROM:imgROM|q[0][1][4]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0
@@ -26,11 +46,11 @@ Type           : Clock Hold: 'clk'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : MemImgROM:imgROM|q[1][1][3]
-To             : sc_img_in[1][1][3]
+From           : MemImgROM:imgROM|q[3][2][7]
+To             : sc_img_in[3][2][7]
 From Clock     : clk
 To Clock       : clk
-Failed Paths   : 4648
+Failed Paths   : 1209
 
 Type           : Total number of failed paths
 Slack          : 
@@ -40,7 +60,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 4648
+Failed Paths   : 1209
 
 --------------------------------------------------------------------------------------
 

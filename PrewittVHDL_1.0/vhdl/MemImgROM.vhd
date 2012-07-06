@@ -17,7 +17,6 @@ end entity;
 
 architecture rtl of MemImgROM is
 
-	-- Build a 2-D array type for the RoM
 	subtype pixel is std_logic_vector(7 downto 0);
 	type memory_t is array(0 to lin, 0 to col) of pixel;
 		
@@ -1797,9 +1796,7 @@ architecture rtl of MemImgROM is
 		return tmp;
 	end init_rom;
 	
-	-- Declare the ROM signal and specify a default value.	Quartus II
-	-- will create a memory initialization file (.mif) based on the 
-	-- default value.
+	-- Declare the ROM signal and specify a default value.
 	signal rom : memory_t := init_rom;
 begin
 	process(clk)

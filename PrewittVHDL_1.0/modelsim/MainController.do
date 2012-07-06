@@ -4,4 +4,4 @@ vsim work.MainController_tb
 
 add wave sim:/MainController_tb/*
 
-run 28080 ns
+run 60040 ns

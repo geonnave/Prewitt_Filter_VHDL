@@ -14,6 +14,7 @@ entity MainController is
 		clk			:	in	std_logic;
 		sload		:	in	std_logic;
 		enable		:	in	std_logic;
+		init		:	in	std_logic;
 		c_sload		:	out	std_logic;
 		count		:	out unsigned(3 downto 0);
 		count_i		:	out natural range 0 to lin;
@@ -93,15 +94,17 @@ begin
 	counter: process(clk)
 	begin
 		if (rising_edge(clk)) then
-		    if (sc_sload = 'U') then
+		    if (init = '0') then
 			    sc_sload <= '1';
 			end if;
-			if (sig_count = "1100" and sc_sload /= 'U') then
-				if (sig_count_j = col-ecol) then 
-					sig_count_j <= 0;
-					sig_count_i <= sig_count_i + elin;
-				else
-					sig_count_j <= sig_count_j + ecol;
+			if (sig_count = "1100" and init = '1') then
+				if (sig_count_i <= lin-rlin and sig_count_j <= col-rcol) then
+					if (sig_count_j = col-2-rcol) then 
+						sig_count_j <= 0;
+						sig_count_i <= sig_count_i + rlin;
+					else
+						sig_count_j <= sig_count_j + rcol;
+					end if;
 				end if;
 				sc_sload <= '1';
 			end if;
@@ -110,17 +113,20 @@ begin
 			end if;
 		end if;
 	end process counter;
+	
 		
 	sc_mh <= mPrewittH;
 	sc_mv <= mPrewittV;
 	
 	prewitt: process(sig_count_j, clk)
 	begin
-		if (sig_count = "1011" and sig_count_i <= lin-elin and sig_count_j <= col-ecol) then
-			si_addr_i <= sig_count_i;
-			si_addr_j <= sig_count_j;
-		elsif (sig_count = "0000") then
-			sc_img_in <= si_q;
+		if (init = '1') then
+			if (sig_count = "1011" and sig_count_i <= lin-rlin and sig_count_j <= col-rcol) then
+				si_addr_i <= sig_count_i;
+				si_addr_j <= sig_count_j;
+			elsif (sig_count = "0000") then
+				sc_img_in <= si_q;
+			end if;
 		end if;
 	end process prewitt;
 	

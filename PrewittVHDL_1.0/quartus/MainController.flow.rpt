@@ -1,5 +1,5 @@
 Flow report for MainController
-Tue Jun 26 14:43:51 2012
+Tue Jul 03 15:02:16 2012
 Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
 
 
@@ -37,22 +37,22 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +------------------------------------+-----------------------------------------+
-; Flow Status                        ; Successful - Tue Jun 26 14:43:50 2012   ;
+; Flow Status                        ; Successful - Tue Jul 03 15:02:16 2012   ;
 ; Quartus II Version                 ; 7.2 Build 151 09/26/2007 SJ Web Edition ;
 ; Revision Name                      ; MainController                          ;
 ; Top-level Entity Name              ; MainController                          ;
 ; Family                             ; Cyclone II                              ;
 ; Met timing requirements            ; No                                      ;
-; Total logic elements               ; 10,076 / 68,416 ( 15 % )                ;
-;     Total combinational functions  ; 10,076 / 68,416 ( 15 % )                ;
-;     Dedicated logic registers      ; 980 / 68,416 ( 1 % )                    ;
-; Total registers                    ; 980                                     ;
-; Total pins                         ; 436 / 622 ( 70 % )                      ;
+; Total logic elements               ; 1,019 / 14,448 ( 7 % )                  ;
+;     Total combinational functions  ; 1,019 / 14,448 ( 7 % )                  ;
+;     Dedicated logic registers      ; 296 / 14,448 ( 2 % )                    ;
+; Total registers                    ; 296                                     ;
+; Total pins                         ; 179 / 315 ( 57 % )                      ;
 ; Total virtual pins                 ; 0                                       ;
-; Total memory bits                  ; 0 / 1,152,000 ( 0 % )                   ;
-; Embedded Multiplier 9-bit elements ; 26 / 300 ( 9 % )                        ;
+; Total memory bits                  ; 0 / 239,616 ( 0 % )                     ;
+; Embedded Multiplier 9-bit elements ; 8 / 52 ( 15 % )                         ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                           ;
-; Device                             ; EP2C70F896C6                            ;
+; Device                             ; EP2C15AF484C6                           ;
 ; Timing Models                      ; Final                                   ;
 +------------------------------------+-----------------------------------------+
 
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/26/2012 14:38:34 ;
+; Start date & time ; 07/03/2012 15:01:08 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MainController      ;
 +-------------------+---------------------+
@@ -84,11 +84,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ;
 +-------------------------+--------------+-------------------------+
-; Analysis & Synthesis    ; 00:02:49     ; 1.0                     ;
-; Fitter                  ; 00:02:02     ; 1.0                     ;
-; Assembler               ; 00:00:16     ; 1.0                     ;
-; Classic Timing Analyzer ; 00:00:02     ; 1.0                     ;
-; Total                   ; 00:05:09     ; --                      ;
+; Analysis & Synthesis    ; 00:00:53     ; 1.0                     ;
+; Fitter                  ; 00:00:08     ; 1.0                     ;
+; Assembler               ; 00:00:04     ; 1.0                     ;
+; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ;
+; Total                   ; 00:01:05     ; --                      ;
 +-------------------------+--------------+-------------------------+
 
 

@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Jun 26 14:41:23 2012
+Analysis & Synthesis Status : Successful - Tue Jul 03 15:02:00 2012
 Quartus II Version : 7.2 Build 151 09/26/2007 SJ Web Edition
 Revision Name : MainController
 Top-level Entity Name : MainController
 Family : Cyclone II
-Total logic elements : 10,076
-    Total combinational functions : 10,076
-    Dedicated logic registers : 1,084
-Total registers : 1084
-Total pins : 436
+Total logic elements : 1,019
+    Total combinational functions : 1,019
+    Dedicated logic registers : 332
+Total registers : 332
+Total pins : 179
 Total virtual pins : 0
 Total memory bits : 0
-Embedded Multiplier 9-bit elements : 26
+Embedded Multiplier 9-bit elements : 8
 Total PLLs : 0

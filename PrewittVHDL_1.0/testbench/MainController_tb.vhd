@@ -21,6 +21,7 @@ component MainController is
 		clk			:	in	std_logic;
 		sload		:	in	std_logic;
 		enable		:	in	std_logic;
+		init		:	buffer	std_logic;
 		c_sload		:	out	std_logic;
 		count		:	out unsigned(3 downto 0);
 		count_i		:	out natural range 0 to lin;
@@ -33,6 +34,7 @@ end component;
 signal	sig_clk		:	std_logic;
 signal	sig_sload	:	std_logic;
 signal	sig_enable	:	std_logic;
+signal	sig_init	:	std_logic;
 signal	sig_c_sload	:	std_logic;
 signal	sig_count	:	unsigned(3 downto 0);
 signal	sig_count_i	:	natural range 0 to lin;
@@ -45,20 +47,18 @@ for dut: MainController use entity work.MainController;
 begin
 	
 	dut: MainController port map (
-		clk => sig_clk, sload => sig_sload, enable => sig_enable, count => sig_count, c_sload => sig_c_sload,
-		count_i => sig_count_i, count_j => sig_count_j, m => sig_m, o => sig_o
+		clk => sig_clk, sload => sig_sload, enable => sig_enable, init => sig_init, count => sig_count, 
+		c_sload => sig_c_sload,	count_i => sig_count_i, count_j => sig_count_j, m => sig_m, o => sig_o
 	);
 	
 	
 	tb : process 
 --	variable	t	:	integer	:=	(560 * ((lin/elin)*(col/ecol)));
 	begin
---		init <= '1';
---		wait for 40 ns;
---		init <= '0';
-		wait for 27480 ns;
-		wait for 560 ns;
-		wait for 80 ns;
+		sig_init <= '0';
+		wait for 240 ns;
+		sig_init <= '1';
+		wait for 60000 ns;
 	end process tb;
 	
 	clock_gen : process
