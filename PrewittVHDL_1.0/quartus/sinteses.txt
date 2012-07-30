@@ -1,0 +1,14 @@
+com MAC_signed
+ r = 4
+pins = 131
+multipliers = 26
+
+r = 5
+pins = 203
+multipliers = 36
+
+com SelectAC 
+ r = 5
+pins = 203
+multipliers = 0
+

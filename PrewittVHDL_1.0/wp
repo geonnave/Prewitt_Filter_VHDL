@@ -164,6 +164,7 @@
                     <File name="modelsim\work\types\_vhdl.psm" />
                 </Folder>
                 <File name="modelsim\work\_info" />
+                <File name="modelsim\all.do" />
             </Folder>
             <File name="modelsim\ConvolutionHV.do" />
             <File name="modelsim\ConvolutionN.do" />
@@ -174,7 +175,6 @@
             <File name="modelsim\modelsim.ini" />
             <File name="modelsim\Saturator.do" />
             <File name="modelsim\sim.do" />
-            <File name="modelsim\vcom_all.do" />
             <File name="modelsim\vsim.wlf" />
             <File name="modelsim\workspace" />
         </Folder>
@@ -310,6 +310,6 @@
             <File name="vhdl\Saturator.vhd" />
             <File name="vhdl\SelectAC.vhd" />
         </Folder>
-        <File name="README.md" />
+        <File name="D:\Faculdade\IC_VHDL\Developments\Prewitt_Filter_VHDL\README.md" />
     </Project>
 </NotepadPlus>

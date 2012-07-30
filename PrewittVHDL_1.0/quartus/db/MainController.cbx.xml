@@ -1,13 +1,5 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="MainController">
-		<CBX_INST_ENTRY INSTANCE_NAME="|MainController|ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:2:con|MAC_signed:macH|lpm_mult:Mult0" CBX_FILE_NAME="mult_vk01.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|MainController|ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:2:con|MAC_signed:macV|lpm_mult:Mult0" CBX_FILE_NAME="mult_vk01.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|MainController|ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:1:con|MAC_signed:macH|lpm_mult:Mult0" CBX_FILE_NAME="mult_vk01.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|MainController|ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:1:con|MAC_signed:macV|lpm_mult:Mult0" CBX_FILE_NAME="mult_vk01.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|MainController|ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:1:con|MAC_signed:macH|lpm_mult:Mult0" CBX_FILE_NAME="mult_vk01.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|MainController|ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:1:con|MAC_signed:macV|lpm_mult:Mult0" CBX_FILE_NAME="mult_vk01.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|MainController|ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:2:con|MAC_signed:macH|lpm_mult:Mult0" CBX_FILE_NAME="mult_vk01.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|MainController|ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:2:con|MAC_signed:macV|lpm_mult:Mult0" CBX_FILE_NAME="mult_vk01.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

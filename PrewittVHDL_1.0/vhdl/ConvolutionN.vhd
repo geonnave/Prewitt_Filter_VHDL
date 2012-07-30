@@ -5,6 +5,9 @@ use ieee.numeric_std.all;
 use work.matrix_types.all;
 use work.ConvolutionHV;
 
+--	The purpose of this circuit is to instantiate the ConvolutionHV n times to 
+--	perform the convolution over a lot of pixels at a once time.
+
 entity ConvolutionN is
 	port
 	(
@@ -13,7 +16,6 @@ entity ConvolutionN is
 		mv							:	in	std_logic_vector(26 downto 0)	:=	"001000111001000111001000111";			--	vertical filter mask 
 		clk							:	in	std_logic;				--	the clock
 		sload						:	in	std_logic;				--	--	
-		counter						:	out	unsigned(3 downto 0);	
 		img_out						:	out	matrix_out	-- image out
 	);
 end entity;
@@ -34,8 +36,7 @@ component ConvolutionHV is
 		mv_x2y0, mv_x2y1, mv_x2y2	:	in signed(2 downto 0);
 		clk							:	in std_logic;				--	the clock
 		sload						:	in std_logic;				--	
-		pixel_out					:	out std_logic_vector(7 downto 0);		--	the output pixel 
-		count						:	out unsigned(3 downto 0)
+		pixel_out					:	out std_logic_vector(7 downto 0)		--	the output pixel 
 	);
 end component;
 
@@ -51,7 +52,6 @@ signal 	smv_x0y0, smv_x0y1, smv_x0y2,
 signal	sig_clk							:	std_logic				:= '0';
 signal	sig_sload						:	std_logic				:= '0';
 signal	sig_pixel_out					:	std_logic_vector(7 downto 0);
-signal	sig_count						:	unsigned(3 downto 0);
 
 
 signal sig_img_out						:	matrix_out;
@@ -72,12 +72,10 @@ begin
 				mv_x0y0 => signed(mv(26 downto 24)),	mv_x0y1 => signed(mv(23 downto 21)), 	mv_x0y2 => signed(mv(20 downto 18)),
 				mv_x1y0 => signed(mv(17 downto 15)),	mv_x1y1 => signed(mv(14 downto 12)),	mv_x1y2 => signed(mv(11 downto 9)),
 				mv_x2y0 => signed(mv(8 	downto 6)),		mv_x2y1 => signed(mv(5 	downto 3)),		mv_x2y2 => signed(mv(2 	downto 0)),
-				clk => sig_clk, sload => sig_sload, pixel_out => sig_img_out(i, j), count => sig_count
+				clk => sig_clk, sload => sig_sload, pixel_out => sig_img_out(i, j)
 			);
 		end generate gen_col;
 	end generate gen_lin;
-	
-	counter <= sig_count;
 	
 	img_out <= sig_img_out;
 	

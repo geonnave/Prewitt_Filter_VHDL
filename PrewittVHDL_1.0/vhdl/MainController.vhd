@@ -8,18 +8,20 @@ use work.MemImgROM;
 use work.ConvolutionN;
 
 
+--	This is the Top Level circuit. 
+--	The purpose of this circuit is to instantiate the ConvolutionN and the 
+--	memory, to perform the edge detection over the whole image.
+--	
+--	
+--	
+
+
 entity MainController is
 	port
 	(
 		clk			:	in	std_logic;
 		sload		:	in	std_logic;
-		enable		:	in	std_logic;
 		init		:	in	std_logic;
-		c_sload		:	out	std_logic;
-		count		:	out unsigned(3 downto 0);
-		count_i		:	out natural range 0 to lin;
-		count_j		:	out natural range 0 to col;
-		m			:	out matrix_in;
 		o			:	out matrix_out
 	);
 end entity;
@@ -43,7 +45,6 @@ component ConvolutionN is
 		mv							:	in	std_logic_vector(26 downto 0);			--	vertical filter mask 
 		clk							:	in	std_logic;				--	the clock
 		sload						:	in	std_logic;				--	
---		counter						:	out	unsigned(3 downto 0);	
 		img_out						:	out	matrix_out	-- image out
 	);
 end component;
@@ -58,7 +59,6 @@ signal	sc_mh		:	std_logic_vector(26 downto 0);
 signal	sc_mv		:	std_logic_vector(26 downto 0);
 signal	sc_clk		:	std_logic;
 signal	sc_sload	:	std_logic;
---signal	sig_count	:	unsigned(3 downto 0);
 signal	sc_img_out	:	matrix_out;
 
 signal	sig_count		:	unsigned(3 downto 0)	:=	"1100";
@@ -77,8 +77,6 @@ begin
 	
 	si_clk <= clk;
 	sc_clk <= clk;
-	
-	count <= sig_count;
 	
 	process(clk)
 	begin
@@ -114,7 +112,6 @@ begin
 		end if;
 	end process counter;
 	
-		
 	sc_mh <= mPrewittH;
 	sc_mv <= mPrewittV;
 	
@@ -129,13 +126,6 @@ begin
 			end if;
 		end if;
 	end process prewitt;
-	
-	c_sload <= sc_sload;
-	
-	count_i <= sig_count_i;
-	count_j <= sig_count_j;
-	
-	m <= sc_img_in;
 	
 	o <= sc_img_out;
 	

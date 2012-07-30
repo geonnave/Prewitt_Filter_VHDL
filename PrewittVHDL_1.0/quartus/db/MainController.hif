@@ -22,220 +22,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-ConvolutionHV
-# storage
-db|MainController.(3).cnf
-db|MainController.(3).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-..|vhdl|ConvolutionHV.vhd
-3673967a447b713acb5d4f5688941
-4
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(in_x0y0)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(in_x0y1)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(in_x0y2)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(in_x1y0)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(in_x1y1)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(in_x1y2)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(in_x2y0)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(in_x2y1)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(in_x2y2)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(mh_x0y0)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(mh_x0y1)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(mh_x0y2)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(mh_x1y0)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(mh_x1y1)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(mh_x1y2)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(mh_x2y0)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(mh_x2y1)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(mh_x2y2)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(mv_x0y0)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(mv_x0y1)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(mv_x0y2)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(mv_x1y0)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(mv_x1y1)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(mv_x1y2)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(mv_x2y0)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(mv_x2y1)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(mv_x2y2)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(pixel_out)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(count)
-3 downto 0
-PARAMETER_STRING
-USR
-}
-# include_file {
-..|vhdl|Saturator.vhd
-3eb842fd52cba6e28a629038fcb24822
-..|vhdl|MAC_signed.vhd
-93d41e5ce9ce331a08f527c9bd51a0
-}
-# hierarchies {
-ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:1:con
-ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:2:con
-ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:1:con
-ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:2:con
-}
-# lmf
-c:|altera|72|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-MAC_signed
-# storage
-db|MainController.(4).cnf
-db|MainController.(4).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-..|vhdl|MAC_signed.vhd
-93d41e5ce9ce331a08f527c9bd51a0
-4
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(a)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(b)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(accum_out)
-15 downto 0
-PARAMETER_STRING
-USR
-}
-# hierarchies {
-ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:1:con|MAC_signed:macH
-ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:1:con|MAC_signed:macV
-ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:2:con|MAC_signed:macH
-ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:2:con|MAC_signed:macV
-ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:1:con|MAC_signed:macH
-ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:1:con|MAC_signed:macV
-ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:2:con|MAC_signed:macH
-ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:2:con|MAC_signed:macV
-}
-# lmf
-c:|altera|72|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 Saturator
 # storage
 db|MainController.(5).cnf
@@ -247,7 +33,7 @@ ON
 # case_insensitive
 # source_file
 ..|vhdl|Saturator.vhd
-3eb842fd52cba6e28a629038fcb24822
+6d2ed58773483168b64f4c7b79f2fad3
 4
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -272,8 +58,40 @@ USR
 # hierarchies {
 ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:1:con|Saturator:sat
 ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:2:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:3:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:4:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:5:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:6:con|Saturator:sat
 ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:1:con|Saturator:sat
 ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:2:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:3:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:4:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:5:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:6:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:1:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:2:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:3:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:4:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:5:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:6:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:1:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:2:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:3:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:4:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:5:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:6:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:1:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:2:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:3:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:4:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:5:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:6:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:1:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:2:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:3:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:4:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:5:con|Saturator:sat
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:6:con|Saturator:sat
 }
 # lmf
 c:|altera|72|quartus|lmf|maxplus2.lmf
@@ -1786,12 +1604,12 @@ c:|altera|72|quartus|libraries|megafunctions|bypassff.inc
 8e8df160d449a63ec15dc86ecf2b373f
 c:|altera|72|quartus|libraries|megafunctions|altshift.inc
 70fa13aee7d6d160ef20b2de32813a
+c:|altera|72|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
+c08f604aefba5b4f1f554e565113c6
 c:|altera|72|quartus|libraries|megafunctions|addcore.inc
 ff795e21e4847824c03218724f1a1252
 c:|altera|72|quartus|libraries|megafunctions|look_add.inc
 ab9f577d30c5ef3166fab6c1c32c4a
-c:|altera|72|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
-c08f604aefba5b4f1f554e565113c6
 c:|altera|72|quartus|libraries|megafunctions|alt_mercury_add_sub.inc
 ae39f15ed67cc9a095d29f68f6ad0f8
 }
@@ -2729,57 +2547,6 @@ d41d8cd98f0b24e980998ecf8427e
 
 # end
 # entity
-MainController
-# storage
-db|MainController.(0).cnf
-db|MainController.(0).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-..|vhdl|MainController.vhd
-551933f577d9697d9d7243db4d1211
-4
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# include_file {
-..|vhdl|ConvolutionHV.vhd
-3673967a447b713acb5d4f5688941
-..|vhdl|Saturator.vhd
-3eb842fd52cba6e28a629038fcb24822
-..|vhdl|MAC_signed.vhd
-93d41e5ce9ce331a08f527c9bd51a0
-..|vhdl|ConvolutionN.vhd
-a5ebd0ec28325553457df231eb98b3
-..|packages|matrix_types.vhd
-cdf451c89d5e8c881a955c6ffc2f6bb8
-..|packages|filter_masks.vhd
-bfc7a3a77b752e14ce1c26e61f6ca6e
-..|vhdl|MemImgROM.vhd
-de9cacdf5e414c988e7a4d4ab11033ff
-..|packages|mem_size.vhd
-c8b7333f96e3f149891e996896db1c63
-}
-# hierarchies {
-|
-}
-# lmf
-c:|altera|72|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 MemImgROM
 # storage
 db|MainController.(1).cnf
@@ -2791,7 +2558,7 @@ ON
 # case_insensitive
 # source_file
 ..|vhdl|MemImgROM.vhd
-de9cacdf5e414c988e7a4d4ab11033ff
+5157f7ab3fa268738824f321f3c2ef
 4
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -2805,18 +2572,71 @@ ON
 }
 # user_parameter {
  constraint(q)
-0 to 3
+0 to 7
 PARAMETER_STRING
 USR
 }
 # include_file {
 ..|packages|matrix_types.vhd
-cdf451c89d5e8c881a955c6ffc2f6bb8
+f6e6109b0d9c222dd8f4f909e4fa643
 ..|packages|mem_size.vhd
-c8b7333f96e3f149891e996896db1c63
+b0469cfeed7f162762fb2fa251b19a39
 }
 # hierarchies {
 MemImgROM:imgROM
+}
+# lmf
+c:|altera|72|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+MainController
+# storage
+db|MainController.(0).cnf
+db|MainController.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+..|vhdl|MainController.vhd
+c6e18d331c5705ca2bd84534af63898
+4
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+..|vhdl|ConvolutionHV.vhd
+f24ab2fc481b1cc31699c1be88b6eb50
+..|vhdl|Saturator.vhd
+6d2ed58773483168b64f4c7b79f2fad3
+..|vhdl|SelectAC.vhd
+255f795bed041a35156f21b5bd6319
+..|vhdl|MAC_signed.vhd
+3a10b448677d3949d41a3456fc21507c
+..|vhdl|ConvolutionN.vhd
+2fad923f61334352f7a6ba7335a365
+..|packages|matrix_types.vhd
+f6e6109b0d9c222dd8f4f909e4fa643
+..|packages|filter_masks.vhd
+bfc7a3a77b752e14ce1c26e61f6ca6e
+..|vhdl|MemImgROM.vhd
+5157f7ab3fa268738824f321f3c2ef
+..|packages|mem_size.vhd
+b0469cfeed7f162762fb2fa251b19a39
+}
+# hierarchies {
+|
 }
 # lmf
 c:|altera|72|quartus|lmf|maxplus2.lmf
@@ -2836,7 +2656,7 @@ ON
 # case_insensitive
 # source_file
 ..|vhdl|ConvolutionN.vhd
-a5ebd0ec28325553457df231eb98b3
+2fad923f61334352f7a6ba7335a365
 4
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -2850,7 +2670,7 @@ ON
 }
 # user_parameter {
  constraint(img_in)
-0 to 3
+0 to 7
 PARAMETER_STRING
 USR
  constraint(mh)
@@ -2862,22 +2682,332 @@ USR
 PARAMETER_STRING
 USR
  constraint(img_out)
-1 to 2
+1 to 6
 PARAMETER_STRING
 USR
 }
 # include_file {
 ..|vhdl|ConvolutionHV.vhd
-3673967a447b713acb5d4f5688941
+f24ab2fc481b1cc31699c1be88b6eb50
 ..|vhdl|Saturator.vhd
-3eb842fd52cba6e28a629038fcb24822
+6d2ed58773483168b64f4c7b79f2fad3
+..|vhdl|SelectAC.vhd
+255f795bed041a35156f21b5bd6319
 ..|vhdl|MAC_signed.vhd
-93d41e5ce9ce331a08f527c9bd51a0
+3a10b448677d3949d41a3456fc21507c
 ..|packages|matrix_types.vhd
-cdf451c89d5e8c881a955c6ffc2f6bb8
+f6e6109b0d9c222dd8f4f909e4fa643
 }
 # hierarchies {
 ConvolutionN:convN
+}
+# lmf
+c:|altera|72|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+ConvolutionHV
+# storage
+db|MainController.(3).cnf
+db|MainController.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+..|vhdl|ConvolutionHV.vhd
+f24ab2fc481b1cc31699c1be88b6eb50
+4
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(in_x0y0)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in_x0y1)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in_x0y2)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in_x1y0)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in_x1y1)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in_x1y2)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in_x2y0)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in_x2y1)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in_x2y2)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(mh_x0y0)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mh_x0y1)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mh_x0y2)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mh_x1y0)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mh_x1y1)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mh_x1y2)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mh_x2y0)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mh_x2y1)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mh_x2y2)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv_x0y0)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv_x0y1)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv_x0y2)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv_x1y0)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv_x1y1)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv_x1y2)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv_x2y0)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv_x2y1)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(mv_x2y2)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(pixel_out)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+..|vhdl|Saturator.vhd
+6d2ed58773483168b64f4c7b79f2fad3
+..|vhdl|SelectAC.vhd
+255f795bed041a35156f21b5bd6319
+..|vhdl|MAC_signed.vhd
+3a10b448677d3949d41a3456fc21507c
+}
+# hierarchies {
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:1:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:2:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:3:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:4:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:5:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:6:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:1:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:2:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:3:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:4:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:5:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:6:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:1:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:2:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:3:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:4:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:5:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:6:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:1:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:2:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:3:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:4:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:5:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:6:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:1:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:2:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:3:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:4:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:5:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:6:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:1:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:2:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:3:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:4:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:5:con
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:6:con
+}
+# lmf
+c:|altera|72|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+SelectAC
+# storage
+db|MainController.(4).cnf
+db|MainController.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+..|vhdl|SelectAC.vhd
+255f795bed041a35156f21b5bd6319
+4
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(a)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(b)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(accum_out)
+15 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:1:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:1:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:2:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:2:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:3:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:3:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:4:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:4:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:5:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:5:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:6:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:1:gen_col:6:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:1:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:1:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:2:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:2:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:3:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:3:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:4:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:4:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:5:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:5:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:6:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:2:gen_col:6:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:1:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:1:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:2:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:2:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:3:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:3:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:4:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:4:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:5:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:5:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:6:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:3:gen_col:6:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:1:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:1:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:2:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:2:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:3:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:3:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:4:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:4:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:5:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:5:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:6:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:4:gen_col:6:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:1:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:1:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:2:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:2:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:3:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:3:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:4:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:4:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:5:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:5:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:6:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:6:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:1:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:1:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:2:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:2:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:3:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:3:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:4:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:4:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:5:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:5:con|SelectAC:macV
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:6:con|SelectAC:macH
+ConvolutionN:convN|ConvolutionHV:\gen_lin:6:gen_col:6:con|SelectAC:macV
 }
 # lmf
 c:|altera|72|quartus|lmf|maxplus2.lmf

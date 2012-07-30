@@ -17,7 +17,6 @@ component ConvolutionN is
 		mv							:	in	std_logic_vector(26 downto 0);			--	vertical filter mask 
 		clk							:	in	std_logic;				--	the clock
 		sload						:	in	std_logic;				--	
-		counter						:	out	unsigned(3 downto 0);
 		img_out						:	out	matrix_out	-- image out
 	);
 end component;
@@ -28,7 +27,6 @@ signal	sig_mv							:	std_logic_vector(26 downto 0)		:= (others => '0');			--	ve
 signal	sig_clk							:	std_logic		:=	'0';				--	the clock
 signal	sig_sload						:	std_logic		:=	'0';				--	
 signal	sig_img_out						:	matrix_out;	-- image out
-signal	sig_count						:	unsigned(3 downto 0);
 
 for dut: ConvolutionN use entity work.ConvolutionN;
 
@@ -36,7 +34,7 @@ begin
 
 	dut: ConvolutionN port map (
 		img_in => sig_img_in, mh => sig_mh, mv => sig_mv, clk => sig_clk, 
-		sload => sig_sload, counter => sig_count, img_out => sig_img_out
+		sload => sig_sload, img_out => sig_img_out
 	);
 	
 	tb : process 

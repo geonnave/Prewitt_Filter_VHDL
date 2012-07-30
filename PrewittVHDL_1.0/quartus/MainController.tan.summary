@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 1.540 ns
+Actual Time    : 3.585 ns
 From           : init
-To             : sig_count_i[3]
+To             : sc_sload
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 13.132 ns
-From           : sc_img_in[0][0][4]
-To             : m[0][0][4]
+Actual Time    : 13.995 ns
+From           : ConvolutionN:convN|ConvolutionHV:\gen_lin:5:gen_col:1:con|pixel_out[4]
+To             : o[5][1][4]
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 0.375 ns
+Actual Time    : -1.371 ns
 From           : init
-To             : sig_count_j[2]
+To             : sig_count_j[5]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 64.99 MHz ( period = 15.386 ns )
-From           : si_addr_i[3]
-To             : MemImgROM:imgROM|q[0][1][4]
+Actual Time    : 33.07 MHz ( period = 30.242 ns )
+From           : si_addr_i[5]
+To             : MemImgROM:imgROM|q[3][0][5]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0
@@ -46,11 +46,11 @@ Type           : Clock Hold: 'clk'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : MemImgROM:imgROM|q[3][2][7]
-To             : sc_img_in[3][2][7]
+From           : MemImgROM:imgROM|q[7][0][3]
+To             : sc_img_in[7][0][3]
 From Clock     : clk
 To Clock       : clk
-Failed Paths   : 1209
+Failed Paths   : 946
 
 Type           : Total number of failed paths
 Slack          : 
@@ -60,7 +60,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 1209
+Failed Paths   : 946
 
 --------------------------------------------------------------------------------------
 

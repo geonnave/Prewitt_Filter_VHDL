@@ -2,32 +2,33 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.MAC_signed;
+use work.SelectAC;
 use work.Saturator;
+
+--	The purpose of this circuit is to perform the operations of Horizontal and 
+--	Vertical convolution using a mask matrix of dimensions 3x3.
 
 entity ConvolutionHV is
 	port
 	(
 		in_x0y0, in_x0y1, in_x0y2,
 		in_x1y0, in_x1y1, in_x1y2, 
-		in_x2y0, in_x2y1, in_x2y2	:	in std_logic_vector(7 downto 0);
+		in_x2y0, in_x2y1, in_x2y2	:	in std_logic_vector(7 downto 0);		-- 	an 3x3 slice of the image
 		mh_x0y0, mh_x0y1, mh_x0y2,
 		mh_x1y0, mh_x1y1, mh_x1y2, 
-		mh_x2y0, mh_x2y1, mh_x2y2	:	in signed(2 downto 0);
+		mh_x2y0, mh_x2y1, mh_x2y2	:	in signed(2 downto 0);					--	the horizontal filter mask matrix
 		mv_x0y0, mv_x0y1, mv_x0y2,
 		mv_x1y0, mv_x1y1, mv_x1y2, 
-		mv_x2y0, mv_x2y1, mv_x2y2	:	in signed(2 downto 0);
-		clk							:	in std_logic;				--	the clock
-		sload						:	in std_logic;				--	
-		pixel_out					:	out std_logic_vector(7 downto 0);		--	the output pixel 
-		count						:	out unsigned(3 downto 0);
-		accumH						:	out signed(15 downto 0);		--just for test, to see the results
-		accumV						:	out signed(15 downto 0)		--just for test, to see the results
+		mv_x2y0, mv_x2y1, mv_x2y2	:	in signed(2 downto 0);					--	the horizontal filter mask matrix
+		clk							:	in std_logic;
+		sload						:	in std_logic;
+		pixel_out					:	out std_logic_vector(7 downto 0)		--	the output pixel 
 	);
 end entity;
 
 architecture rtl of ConvolutionHV is
 
-component MAC_signed is
+component SelectAC is
 	port
 	(
 		a			:	in std_logic_vector(7 downto 0);		--	a and b are the in pixels
@@ -62,10 +63,10 @@ signal	reg_counter		:	unsigned(3 downto 0)	:= "1100";
 
 
 begin
-	macH: MAC_signed port map (
+	macH: SelectAC port map (
 		a => sig_aH, b => sig_bH, clk => sig_clk, sload => sig_sload, accum_out => sig_accum_outH
 	);
-	macV: MAC_signed port map (
+	macV: SelectAC port map (
 		a => sig_aV, b => sig_bV, clk => sig_clk, sload => sig_sload, accum_out => sig_accum_outV
 	);
 	
@@ -179,15 +180,10 @@ begin
 			end if;
 		end if;
 	end process convolveV;
-	
-	accumH <= sig_accum_outH;
-	accumV <= sig_accum_outV;
 
-	sig_s <= std_logic_vector((sig_accum_outH + sig_accum_outV)) when reg_counter = "1011";
+	sig_s <= std_logic_vector((Abs(sig_accum_outH) + Abs(sig_accum_outV))) when reg_counter = "1011";
 	
 	pixel_out <= sig_o when reg_counter = "1100";
-	
-	count <= reg_counter;
 	
 end rtl;
 

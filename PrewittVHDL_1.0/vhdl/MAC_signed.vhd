@@ -2,6 +2,12 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+--	This, such as the Saturator, are the Low Level entities. Is here and there 
+--	that the lower levels operations happens.
+--	The purpose of this circuit is to multiplicate the two entries and 
+--	accumulate the result on the previous result (if no previous result, it 
+--	will be 0).
+
 entity MAC_signed is
 	port
 	(
@@ -14,7 +20,6 @@ entity MAC_signed is
 end entity;
 
 architecture rtl of MAC_signed is
---	registers (signals) to supply the MAC operation
 signal	a_reg		:	std_logic_vector(7 downto 0);
 signal	b_reg		:	signed(2 downto 0);
 signal	sload_reg	:	std_logic;
@@ -28,7 +33,7 @@ begin
 	
 	process(adder_out, sload_reg)					--	reset the old result or add the sum result
 	begin
-		if(sload_reg = '1') then
+		if (sload_reg = '1') then
 			old_result <= (others => '0');
 		else
 			old_result <= adder_out;
@@ -41,7 +46,6 @@ begin
 			a_reg <= a;
 			b_reg <= b;
 			sload_reg <= sload;
-			
 			adder_out <= old_result + mult_reg;		--	store the sum result in a register
 		end if;
 	end process;
@@ -49,5 +53,3 @@ begin
 	accum_out <= adder_out;							--	the pixel resulting is sent to the output
 	
 end rtl;
-
-

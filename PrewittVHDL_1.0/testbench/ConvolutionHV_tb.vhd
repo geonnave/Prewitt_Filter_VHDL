@@ -21,10 +21,7 @@ component ConvolutionHV is
 		mv_x2y0, mv_x2y1, mv_x2y2	:	in signed(2 downto 0);
 		clk							:	in std_logic;				--	the clock
 		sload						:	in std_logic;				--	
-		pixel_out					:	out std_logic_vector(7 downto 0);		--	the output pixel 
-		count						:	out unsigned(3 downto 0);
-		accumH						:	out signed(15 downto 0);		--just for test, to see the results
-		accumV						:	out signed(15 downto 0)		--just for test, to see the results
+		pixel_out					:	out std_logic_vector(7 downto 0)		--	the output pixel 
 	);
 end component;
 
@@ -40,9 +37,6 @@ signal 	smv_x0y0, smv_x0y1, smv_x0y2,
 signal	sig_clk							:	std_logic				:= '0';
 signal	sig_sload						:	std_logic				:= '0';
 signal	sig_pixel_out					:	std_logic_vector(7 downto 0);
-signal	sig_count						:	unsigned(3 downto 0);
-signal	sig_accumH						:	signed(15 downto 0);
-signal	sig_accumV						:	signed(15 downto 0);
 
 for dut: ConvolutionHV use entity work.ConvolutionHV;
 
@@ -57,7 +51,7 @@ begin
 		mv_x0y0 => smv_x0y0, mv_x0y1 => smv_x0y1, mv_x0y2 => smv_x0y2,
 		mv_x1y0 => smv_x1y0, mv_x1y1 => smv_x1y1, mv_x1y2 => smv_x1y2, 
 		mv_x2y0 => smv_x2y0, mv_x2y1 => smv_x2y1, mv_x2y2 => smv_x2y2,
-		clk => sig_clk, sload => sig_sload, pixel_out => sig_pixel_out, count => sig_count, accumH => sig_accumH, accumV => sig_accumV
+		clk => sig_clk, sload => sig_sload, pixel_out => sig_pixel_out
 	);
 
 	tb: process
