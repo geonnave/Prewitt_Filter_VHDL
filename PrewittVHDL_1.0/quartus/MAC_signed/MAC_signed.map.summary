@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Aug 22 09:12:20 2012
+Quartus II Version : 7.2 Build 151 09/26/2007 SJ Web Edition
+Revision Name : MAC_signed
+Top-level Entity Name : MAC_signed
+Family : Cyclone II
+Total logic elements : 44
+    Total combinational functions : 44
+    Dedicated logic registers : 28
+Total registers : 28
+Total pins : 29
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 1
+Total PLLs : 0

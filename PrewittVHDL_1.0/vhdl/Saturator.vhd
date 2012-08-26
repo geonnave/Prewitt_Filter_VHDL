@@ -19,7 +19,7 @@ architecture sature of Saturator is
 begin
 	-- sature the pixel value to 255 if it is over 255
 	o <= "11111111" when a(8) = '1' or a(9) = '1' or a(10) = '1' or a(11) = '1' or a(12) = '1' or a(13) = '1' or 
-						  a(14) = '1' else
+						 a(14) = '1' else
 		 a(7 downto 0);
 end sature;
 

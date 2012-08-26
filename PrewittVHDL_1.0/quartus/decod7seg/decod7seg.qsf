@@ -1,0 +1,87 @@
+# Copyright (C) 1991-2007 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		decod7seg_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name TOP_LEVEL_ENTITY decod7seg
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 7.2
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:16:46  AUGUST 23, 2012"
+set_global_assignment -name LAST_QUARTUS_VERSION 7.2
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_palace
+set_instance_assignment -name PARTITION_HIERARCHY no_file_for_top_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 2147039 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_location_assignment PIN_N25 -to a[15]
+set_location_assignment PIN_N26 -to a[14]
+set_location_assignment PIN_P25 -to a[13]
+set_location_assignment PIN_AE14 -to a[12]
+set_location_assignment PIN_AF14 -to a[11]
+set_location_assignment PIN_AD13 -to a[10]
+set_location_assignment PIN_AC13 -to a[9]
+set_location_assignment PIN_C13 -to a[8]
+set_location_assignment PIN_B13 -to a[7]
+set_location_assignment PIN_A13 -to a[6]
+set_location_assignment PIN_N1 -to a[5]
+set_location_assignment PIN_P1 -to a[4]
+set_location_assignment PIN_P2 -to a[3]
+set_location_assignment PIN_T7 -to a[2]
+set_location_assignment PIN_U3 -to a[1]
+set_location_assignment PIN_U4 -to a[0]
+set_location_assignment PIN_AF10 -to s1[6]
+set_location_assignment PIN_AB12 -to s1[5]
+set_location_assignment PIN_AC12 -to s1[4]
+set_location_assignment PIN_AD11 -to s1[3]
+set_location_assignment PIN_AE11 -to s1[2]
+set_location_assignment PIN_V14 -to s1[1]
+set_location_assignment PIN_V13 -to s1[0]
+set_location_assignment PIN_V20 -to s2[6]
+set_location_assignment PIN_V21 -to s2[5]
+set_location_assignment PIN_W21 -to s2[4]
+set_location_assignment PIN_Y22 -to s2[3]
+set_location_assignment PIN_AA24 -to s2[2]
+set_location_assignment PIN_AA23 -to s2[1]
+set_location_assignment PIN_AB24 -to s2[0]
+set_location_assignment PIN_AB23 -to s3[6]
+set_location_assignment PIN_V22 -to s3[5]
+set_location_assignment PIN_AC25 -to s3[4]
+set_location_assignment PIN_AC26 -to s3[3]
+set_location_assignment PIN_AB26 -to s3[2]
+set_location_assignment PIN_AB25 -to s3[1]
+set_location_assignment PIN_Y24 -to s3[0]
+set_location_assignment PIN_Y23 -to s4[6]
+set_location_assignment PIN_AA25 -to s4[5]
+set_location_assignment PIN_AA26 -to s4[4]
+set_location_assignment PIN_Y26 -to s4[3]
+set_location_assignment PIN_Y25 -to s4[2]
+set_location_assignment PIN_U22 -to s4[1]
+set_location_assignment PIN_W24 -to s4[0]
+set_global_assignment -name VHDL_FILE ../../vhdl/decod7seg.vhd
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 4
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
